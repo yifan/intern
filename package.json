@@ -1,0 +1,57 @@
+{
+  "name": "page",
+  "version": "1.0.0",
+  "description": "interactive animated page",
+  "main": "index.js",
+  "author": "Yifan Zhang",
+  "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "build:prod": "./node_modules/.bin/webpack -p",
+    "dev": "./node_modules/.bin/webpack-dev-server",
+    "watch": "./node_modules/.bin/webpack --watch",
+    "test": "NODE_ENV=test jest"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "setupTestFrameworkScriptFile": "./src/setupTests.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^22.2.1",
+    "node-sass": "^4.7.2",
+    "react-hot-loader": "^3.1.3",
+    "react-test-renderer": "^16.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "semantic-ui-css": "^2.3.0",
+    "semantic-ui-react": "^0.78.2"
+  }
+}
