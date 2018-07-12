@@ -76,6 +76,7 @@ const commonConfig = {
 if (isProduction) {
   module.exports = function(env) {
     return webpackMerge(commonConfig, {
+      mode: 'production',
       plugins: [
         new webpack.LoaderOptionsPlugin({
           minimize: true,
@@ -103,6 +104,7 @@ if (isProduction) {
 } else {
   module.exports = function(env) {
     return webpackMerge(commonConfig, {
+      mode: 'development',
       devServer: {
         hot: true,
         contentBase: path.resolve(__dirname, './dist/assets/media'),

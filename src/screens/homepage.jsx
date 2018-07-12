@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DocumentTitle from 'react-document-title';
 import { Grid, Header, Button, Icon } from 'semantic-ui-react';
-import Footer from '../base/footer';
+import Footer from '../components/base/footer';
 
 const buttonGroupStyle = {
   width: '100%',
@@ -18,13 +18,7 @@ class HomePage extends React.Component {
     return (
       <div>
         <Header textAlign='center'>
-          <Button.Group style={buttonGroupStyle}>
-            <Button icon='podcast' content='Listen' labelPosition='left'>
-            </Button>
-            <Button.Or />
-            <Button icon='tv' content='Watch' labelPosition='right'>
-            </Button>
-          </Button.Group>
+          Some text
         </Header>
         <Footer/>
       </div>
