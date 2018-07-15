@@ -14,6 +14,11 @@ const commonConfig = {
     app: ['./app.js', 'webpack/hot/only-dev-server'],
     vendor: ['react-hot-loader/patch', 'react', 'react-dom', 'react-router'],
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].bundle.js',
@@ -52,12 +57,6 @@ const commonConfig = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    // split out our specified vendor scripts
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: '[name].[hash].js',
-      minChunks: Infinity,
-    }),
     // make sure Javascript files are being called from our index.html
     // !!html-loader! added to avoid conflict with html-loader
     new HtmlWebpackPlugin({
